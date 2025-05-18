@@ -25,6 +25,7 @@ This is a secure, multiplayer Battleship game built with Python. It supports rea
    ```
 
 3. **Start Four Clients**
+
    **In four separate terminals (or devices), run:**
 
    ```bash
@@ -39,7 +40,9 @@ This is a secure, multiplayer Battleship game built with Python. It supports rea
 - The rest will join as spectators, waiting to be promoted into the next match.
 
 4. **Gameplay Instructions**
+
    Once assigned as a player:
+
    You will see:
 
 ```bash
@@ -50,6 +53,7 @@ This is a secure, multiplayer Battleship game built with Python. It supports rea
 ```
 
 5. **Chat Functionality**
+
    Players can also chat, but only the player whose turn it is can send messages.
 
 ```bash
@@ -65,6 +69,7 @@ Spectators can chat at any time using similar format:
 ```
 
 6. **Reconnection & Quit Notes**
+
    Typing "quit" will simulate a temporary disconnect. You have 60 seconds to reconnect using the same username.
 
 ```bash
@@ -82,6 +87,7 @@ Typing quit! ends the game immediately and promotes the next two players.
 If disconnected unexpectedly (e.g., socket failure), reconnect with the same username to resume your role.
 
 7. **Match Rotation**
+
    After a game ends:
 
    - Both players are demoted to spectators.
@@ -96,6 +102,7 @@ If disconnected unexpectedly (e.g., socket failure), reconnect with the same use
    - This is required only for the first input due to how sockets buffer the prompt.
 
 8. **Testing Replay Protection**
+
    To simulate a replay attack and verify protection:
 
    ```bash
@@ -111,6 +118,7 @@ If disconnected unexpectedly (e.g., socket failure), reconnect with the same use
    ```
 
 9. **Checksum Corruption Test**
+
    To evaluate the checksum defense against corrupted packets:
 
    ```bash
@@ -124,6 +132,7 @@ If disconnected unexpectedly (e.g., socket failure), reconnect with the same use
 
 ## Features
 
+- **battleship.py**: Implements core game logic, including board setup, ship placement, attack handling, and grid display.
 - **server.py**: Main server logic and game coordination
 - **client.py**: Simple terminal-based client
 - **protocol.py**: Packet encoding/decoding with encryption and checksumming
